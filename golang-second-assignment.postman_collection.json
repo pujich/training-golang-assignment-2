@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "1f65d311-9ea7-4c84-8eda-9f32313ecd00",
+		"name": "golang-second-assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9413580"
+	},
+	"item": [
+		{
+			"name": "Add Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_name\": \"Ijall\",\r\n    \"Items\": [\r\n        {\r\n            \"itemCode\": \"A001\",\r\n            \"description\": \"HP2\",\r\n            \"quantity\": 2\r\n        }\r\n    ],\r\n    \"Ordered_at\": \"2023-11-22T22:55:19.439+07:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/addorder",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"addorder"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_name\": \"Ijall\",\r\n    \"Items\": [\r\n        {\r\n            \"itemCode\": \"A001\",\r\n            \"description\": \"HP2\",\r\n            \"quantity\": 2\r\n        }\r\n    ],\r\n    \"Ordered_at\": \"2023-11-22T22:55:19.439+07:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/addorder",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"addorder"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Nov 2023 17:54:46 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Messages\": \"Add Data Success\",\n    \"Success\": true,\n    \"Data\": null\n}"
+				},
+				{
+					"name": "Add Order Multiple Item",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_name\": \"Achin\",\r\n    \"Items\": [\r\n        {\r\n            \"itemCode\": \"A002\",\r\n            \"description\": \"Mobil\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"itemCode\": \"A003\",\r\n            \"description\": \"Motor\",\r\n            \"quantity\": 2\r\n        }\r\n    ],\r\n    \"Ordered_at\": \"2023-11-22T22:55:19.439+07:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/addorder",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"addorder"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Nov 2023 17:55:51 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Messages\": \"Add Data Success\",\n    \"Success\": true,\n    \"Data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/order",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Order",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/order",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"order"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Nov 2023 17:57:14 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1011"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Messages\": \"Get Data Berhasil\",\n    \"Success\": true,\n    \"Data\": [\n        {\n            \"ID\": 1,\n            \"CreatedAt\": \"2023-11-23T00:54:46.444316+07:00\",\n            \"UpdatedAt\": \"2023-11-23T00:54:46.444316+07:00\",\n            \"DeletedAt\": null,\n            \"customer_name\": \"Ijall\",\n            \"Items\": [\n                {\n                    \"ID\": 1,\n                    \"CreatedAt\": \"2023-11-23T00:54:46.445833+07:00\",\n                    \"UpdatedAt\": \"2023-11-23T00:54:46.445833+07:00\",\n                    \"DeletedAt\": null,\n                    \"itemCode\": \"A001\",\n                    \"description\": \"HP2\",\n                    \"quantity\": 2,\n                    \"Order_id\": 1\n                }\n            ],\n            \"Ordered_at\": \"2023-11-22T22:55:19.439+07:00\"\n        },\n        {\n            \"ID\": 2,\n            \"CreatedAt\": \"2023-11-23T00:55:51.762718+07:00\",\n            \"UpdatedAt\": \"2023-11-23T00:55:51.762718+07:00\",\n            \"DeletedAt\": null,\n            \"customer_name\": \"Achin\",\n            \"Items\": [\n                {\n                    \"ID\": 2,\n                    \"CreatedAt\": \"2023-11-23T00:55:51.763461+07:00\",\n                    \"UpdatedAt\": \"2023-11-23T00:55:51.763461+07:00\",\n                    \"DeletedAt\": null,\n                    \"itemCode\": \"A002\",\n                    \"description\": \"Mobil\",\n                    \"quantity\": 2,\n                    \"Order_id\": 2\n                },\n                {\n                    \"ID\": 3,\n                    \"CreatedAt\": \"2023-11-23T00:55:51.763461+07:00\",\n                    \"UpdatedAt\": \"2023-11-23T00:55:51.763461+07:00\",\n                    \"DeletedAt\": null,\n                    \"itemCode\": \"A003\",\n                    \"description\": \"Motor\",\n                    \"quantity\": 2,\n                    \"Order_id\": 2\n                }\n            ],\n            \"Ordered_at\": \"2023-11-22T22:55:19.439+07:00\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_name\": \"Nurfaizal\",\r\n    \"Items\": [\r\n        {\r\n            \"ID\": 1,\r\n            \"itemCode\": \"A011\",\r\n            \"description\": \"HP4\",\r\n            \"quantity\": 3\r\n        }\r\n    ],\r\n    \"Ordered_at\": \"2023-11-22T22:55:19.439+07:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/updateorder/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"updateorder",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Order",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_name\": \"Nurfaizal\",\r\n    \"Items\": [\r\n        {\r\n            \"ID\": 1,\r\n            \"itemCode\": \"A011\",\r\n            \"description\": \"HP4\",\r\n            \"quantity\": 3\r\n        }\r\n    ],\r\n    \"Ordered_at\": \"2023-11-22T22:55:19.439+07:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/updateorder/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"updateorder",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Nov 2023 18:09:07 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "430"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Messages\": \"Update Data Success\",\n    \"Success\": true,\n    \"Data\": {\n        \"ID\": 1,\n        \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n        \"UpdatedAt\": \"2023-11-23T01:09:07.527094+07:00\",\n        \"DeletedAt\": null,\n        \"customer_name\": \"Nurfaizal\",\n        \"Items\": [\n            {\n                \"ID\": 1,\n                \"CreatedAt\": \"2023-11-23T01:09:07.52814+07:00\",\n                \"UpdatedAt\": \"2023-11-23T01:09:07.52814+07:00\",\n                \"DeletedAt\": null,\n                \"itemCode\": \"A011\",\n                \"description\": \"HP4\",\n                \"quantity\": 3,\n                \"Order_id\": 1\n            }\n        ],\n        \"Ordered_at\": \"2023-11-22T22:55:19.439+07:00\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{URL}}/deleteorder/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"deleteorder",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Order",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}/deleteorder/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"deleteorder",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Nov 2023 18:09:40 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Messages\": \"Deleta Data Success\",\n    \"Success\": true,\n    \"Data\": null\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "localhost:8088",
+			"type": "string"
+		}
+	]
+}
